@@ -31,7 +31,7 @@ public class WorkThread implements Runnable{
             Request request = (Request) ois.readObject();
             // 反射调用服务方法获得返回值
             Response response = getResponse(request);
-            System.out.println(response);
+            //System.out.println(response);
             //写入到客户端
             oos.writeObject(response);
             oos.flush();

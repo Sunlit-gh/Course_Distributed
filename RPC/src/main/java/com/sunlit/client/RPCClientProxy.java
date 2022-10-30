@@ -21,7 +21,7 @@ public class RPCClientProxy implements InvocationHandler {
                 .methodName(method.getName())
                 .params(args).paramsTypes(method.getParameterTypes()).build();
         //数据传输
-        System.out.println(request);
+        //System.out.println(request);
         Response response = client.sendRequest(request);
         //System.out.println(response);
         return response.getData();
