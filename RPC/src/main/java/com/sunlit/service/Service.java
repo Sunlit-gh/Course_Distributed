@@ -1,7 +1,5 @@
 package com.sunlit.service;
 
-import com.sunlit.common.Data;
-
 import java.util.ArrayList;
 
 public interface Service {

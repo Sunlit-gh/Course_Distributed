@@ -9,11 +9,9 @@ public class TestServer {
 
         Service service = new ServiceImpl();
 
-
         ServiceProvider serviceProvider = new ServiceProvider();
 
         serviceProvider.provideServiceInterface(service);
-
 
         RPCServer RPCServer = new NettyRPCServer(serviceProvider);
         RPCServer.start(8899);

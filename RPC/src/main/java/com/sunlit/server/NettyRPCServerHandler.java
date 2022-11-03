@@ -17,8 +17,6 @@ import java.lang.reflect.Method;
 @AllArgsConstructor
 public class NettyRPCServerHandler extends SimpleChannelInboundHandler<Request> {
     private ServiceProvider serviceProvider;
-
-
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, Request msg) throws Exception {
         //System.out.println(msg);
@@ -26,7 +24,6 @@ public class NettyRPCServerHandler extends SimpleChannelInboundHandler<Request> 
         ctx.writeAndFlush(response);
         ctx.close();
     }
-
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         cause.printStackTrace();
