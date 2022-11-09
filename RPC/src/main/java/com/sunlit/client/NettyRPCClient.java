@@ -28,7 +28,7 @@ public class NettyRPCClient implements RPCClient {
     }
 
     /**
-     * 这里需要操作一下，因为netty的传输都是异步的，你发送request，会立刻返回一个值， 而不是想要的相应的response
+     * 这里需要操作一下，因为netty的传输都是异步的，发送request，会立刻返回一个值， 而不是想要的相应的response
      */
     @Override
     public Response sendRequest(Request request) {
