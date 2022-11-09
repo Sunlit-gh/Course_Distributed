@@ -13,7 +13,6 @@ public class ServiceImpl implements Service {
         return a + b;
     }
 
-
     public ArrayList<Integer> Sort(ArrayList<Integer> a, Integer n) {
         Collections.sort(a);
         return a;
