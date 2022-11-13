@@ -10,7 +10,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 
-public class TicketSeller implements Runnable {
+public class ZookeeperTicketSeller implements Runnable {
     //总票数
     private int ticket = 100;
 
@@ -20,7 +20,7 @@ public class TicketSeller implements Runnable {
     //分布式可重入排它锁
     private final InterProcessMutex lock;
 
-    public TicketSeller() {
+    public ZookeeperTicketSeller() {
         //重试策略
         RetryPolicy retryPolicy = new ExponentialBackoffRetry(3000, 10);
 
